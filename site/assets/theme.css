@@ -236,9 +236,6 @@
   .relative {
     position: relative;
   }
-  .static {
-    position: static;
-  }
   .-inset-\[5px\] {
     inset: calc(5px * -1);
   }

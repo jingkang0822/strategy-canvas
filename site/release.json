@@ -1,7 +1,7 @@
 {
-  "name": "IB Strategy Desk — Interactive Portfolio",
-  "identity": "0078a5964cfd2d78bb55ce1cf2d5a909c8cf206d274081a1414615afeda39c1d",
-  "site": "https://jingkang0822.github.io/ib-strategy-demo/",
+  "name": "Strategy Canvas — Interactive Strategy Builder",
+  "identity": "c11a8b1114019b7a064686e7cb6a945d43b5106790c6cddfd6be998d4d5df65a",
+  "site": "https://jingkang0822.github.io/strategy-canvas/",
   "data": "Synthetic browser-local demonstration; no brokerage or AI connection.",
   "files": {
     ".nojekyll": {
@@ -9,32 +9,32 @@
       "bytes": 0
     },
     "404.html": {
-      "sha256": "9c96793462cb5292ededacf5fccb1b9a5cf5fed9ffe866ad7f013d85d3001f13",
-      "bytes": 729
+      "sha256": "b03aef186d153a7ea5f0f5127ef5dc1cdd21e9f3ee7211d4dfbafc0d9803784a",
+      "bytes": 1025
     },
     "assets/app.css": {
-      "sha256": "96e2feb64baa1978dd243d4a8e2b58f993de9caf3201ae79a2d0329fe7076320",
-      "bytes": 33870
+      "sha256": "eb42c623950ba6f8239b6f6aa54190ad892187ce75d7e49cbda2d8a8950b0cf2",
+      "bytes": 30885
     },
     "assets/app.js": {
-      "sha256": "c2df8ca7d80ca805af289a1fa0a621b9a828f64cc916939ae9a7aab2c900e38a",
-      "bytes": 429079
+      "sha256": "e52b9e2cc86be51002fbbcf06bf999e7120e114ac358abba1385eb7a1fd95ad8",
+      "bytes": 428488
     },
     "assets/theme.css": {
-      "sha256": "08b7f8a2c55e2bfd24643d7369fee8fc00feccc35541ae0806859f3bb9839700",
-      "bytes": 53702
+      "sha256": "f7b9ea8b1b19b20360b67c6205b5e81ce99b497a18aa35fd984e225df4f1dfa8",
+      "bytes": 53664
     },
     "index.html": {
-      "sha256": "9c96793462cb5292ededacf5fccb1b9a5cf5fed9ffe866ad7f013d85d3001f13",
-      "bytes": 729
+      "sha256": "b03aef186d153a7ea5f0f5127ef5dc1cdd21e9f3ee7211d4dfbafc0d9803784a",
+      "bytes": 1025
     },
     "robots.txt": {
-      "sha256": "a2af5d40fea8858dbc72e48e0e7182f895fd8e55799660f8a4d08820651789c1",
-      "bytes": 92
+      "sha256": "b2291ebc115304fadbd1a780a1f29069a925a44dab91cc960d4d6af83eddbfe8",
+      "bytes": 91
     },
     "sitemap.xml": {
-      "sha256": "7d7bd36a0dca32c7537728a9070a22d28a0c83adcda4f1895f046263898f444a",
-      "bytes": 179
+      "sha256": "01e5a4f8cba5c6b6c98598463b825db32321fd3bd28554fb5c585dffe4fc3361",
+      "bytes": 178
     }
   }
 }

@@ -1,45 +1,41 @@
-# IB Strategy Desk — Interactive Portfolio
+# Strategy Canvas
 
-[Open the interactive demo](https://jingkang0822.github.io/ib-strategy-demo/)
+[Open the interactive demo](https://jingkang0822.github.io/strategy-canvas/)
 
-Explore a rule-based strategy workspace: edit CAPE/VIX inputs, arrange its
-dependency graph, and inspect successful, failed, or cancelled execution replays.
-Changes and history stay in your own browser.
+Drag the nodes. Connect the logic. See the decision.
 
-## What is real, and what is illustrative
-
-The allocation calculation uses the same TypeScript 4 × 4 regime matrix as the
-production frontend. The market observations, strategy presets and execution
-traces are synthetic. No login, brokerage account, trading API, remote AI service
-or application server is involved. No investment performance is claimed.
+One strategy workspace: build a graph from the node library, arrange its steps,
+inspect and edit a node, then run a local simulation and follow its captured
+inputs, outputs and status. Your draft and results stay in your browser.
 
 ## Try it
 
-1. Open Strategy and choose a preset. Change CAPE or VIX and watch target weights.
-2. Drag or inspect nodes. Remove a connection to see validation; Restore template
-   recovers a runnable dependency graph.
-3. Run a successful calculation or an injected source failure. Inspect captured
-   inputs, node outputs and terminal status in Run history.
-4. Refresh to confirm browser-local persistence, or explicitly Reset demo workspace.
+1. Drag a node from the library onto the canvas, or click to add it.
+2. Move nodes, connect their handles and open the inspector to edit them.
+3. Tune CAPE/VIX inputs and watch the target allocation change.
+4. Run the simulation, inspect node results, or try the source-failure scenario.
+5. Refresh to resume your draft; Undo or confirm Restore template to recover.
+
+## Demonstration data
+
+The market snapshot, sample holdings and execution evidence are synthetic.
+The target calculation uses the production frontend's TypeScript 4 × 4 regime
+matrix. Custom analysis nodes emit labelled local demo results. The finite graph
+simulation runs sequentially; it does not call a broker, market-data service or
+remote AI model. No investment performance is claimed and no orders are sent.
 
 ## Architecture and delivery
 
-The demo reuses React/TypeScript presentation components, React Flow graph
-rendering, the SVG chart, an accessible modal, the graph template and the pure
-allocation matrix from the product. A separate browser-local adapter owns demo
-state and finite sequential replay. Hash navigation and relative assets support
-GitHub Pages project paths.
+React/TypeScript, shared React Flow canvas/node/edge components, the original graph
+catalog and pure allocation matrix. A browser-local adapter owns the single draft
+and simulation. Static relative assets support the GitHub Pages project path.
 
-This repository contains the inspected, compiled public artifact only; private
-product source, configuration and history are not published. `site/release.json`
-records the SHA-256 identity and exact static file hashes. The deployment workflow
-verifies these hashes before publishing. Product source acceptance includes unit
-tests, typechecking and real Chromium interaction tests at desktop/mobile sizes,
-plus storage failure, cancellation, reset and reload scenarios.
+This repository contains inspected compiled artifacts only. Private product source,
+configuration and history are not published. `site/release.json` records the release
+identity and SHA-256 hashes; GitHub Actions verifies them before publication.
+Source acceptance covers model tests, typechecking and real Chromium interaction
+flows at desktop/mobile sizes, plus drag/drop, cancellation and storage recovery.
 
-## Publish an updated artifact
-
-Replace only the generated `site/` files with a newly verified build, retaining
-`release.json`, and commit. GitHub Actions deploys `site/` to Pages. Existing
-browser state is versioned under `ib-strategy-showcase:v1`; the UI offers an
-explicit reset. Bundled third-party license notices are retained in the output.
+Publish updates by replacing only generated `site/` files with a verified build
+and committing. The existing versioned browser storage namespace is retained for
+visitor continuity. Bundled third-party license notices remain in the output.
