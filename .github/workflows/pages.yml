@@ -1,0 +1,49 @@
+name: Deploy verified static showcase
+
+on:
+  push:
+    branches: [main]
+    paths: [site/**, .github/workflows/pages.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Verify the release artifact
+        shell: bash
+        run: |
+          node --input-type=module <<'JS'
+          import { readFileSync } from 'node:fs';
+          import { createHash } from 'node:crypto';
+          import assert from 'node:assert/strict';
+          const release = JSON.parse(readFileSync('site/release.json', 'utf8'));
+          for (const [name, file] of Object.entries(release.files)) {
+            assert.match(name, /^(?:index\.html|404\.html|\.nojekyll|robots\.txt|sitemap\.xml|assets\/[a-z0-9_.-]+\.(?:js|css|svg|png))$/);
+            const content = readFileSync(`site/${name}`);
+            assert.equal(content.length, file.bytes, name);
+            assert.equal(createHash('sha256').update(content).digest('hex'), file.sha256, name);
+          }
+          console.log(`Verified release ${release.identity}`);
+          JS
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

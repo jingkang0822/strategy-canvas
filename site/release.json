@@ -1,0 +1,40 @@
+{
+  "name": "IB Strategy Desk — Interactive Portfolio",
+  "identity": "0078a5964cfd2d78bb55ce1cf2d5a909c8cf206d274081a1414615afeda39c1d",
+  "site": "https://jingkang0822.github.io/ib-strategy-demo/",
+  "data": "Synthetic browser-local demonstration; no brokerage or AI connection.",
+  "files": {
+    ".nojekyll": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "404.html": {
+      "sha256": "9c96793462cb5292ededacf5fccb1b9a5cf5fed9ffe866ad7f013d85d3001f13",
+      "bytes": 729
+    },
+    "assets/app.css": {
+      "sha256": "96e2feb64baa1978dd243d4a8e2b58f993de9caf3201ae79a2d0329fe7076320",
+      "bytes": 33870
+    },
+    "assets/app.js": {
+      "sha256": "c2df8ca7d80ca805af289a1fa0a621b9a828f64cc916939ae9a7aab2c900e38a",
+      "bytes": 429079
+    },
+    "assets/theme.css": {
+      "sha256": "08b7f8a2c55e2bfd24643d7369fee8fc00feccc35541ae0806859f3bb9839700",
+      "bytes": 53702
+    },
+    "index.html": {
+      "sha256": "9c96793462cb5292ededacf5fccb1b9a5cf5fed9ffe866ad7f013d85d3001f13",
+      "bytes": 729
+    },
+    "robots.txt": {
+      "sha256": "a2af5d40fea8858dbc72e48e0e7182f895fd8e55799660f8a4d08820651789c1",
+      "bytes": 92
+    },
+    "sitemap.xml": {
+      "sha256": "7d7bd36a0dca32c7537728a9070a22d28a0c83adcda4f1895f046263898f444a",
+      "bytes": 179
+    }
+  }
+}
